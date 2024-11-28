@@ -1,0 +1,58 @@
+---
+title: "Overview"
+---
+
+## High-level description
+ Metriport is an open-source universal API for accessing comprehensive patient medical data. It is structured as a monorepo using npm workspaces, containing multiple packages that make up the Metriport ecosystem, including the API server, SDKs, infrastructure code, and documentation.
+
+## What does it do?
+Metriport provides a unified interface for healthcare organizations to access and manage patient medical data. The project includes:
+
+1. A Medical API for querying and managing patient data, documents, and FHIR resources.
+2. A FHIR Converter API for transforming various healthcare data formats.
+3. SDKs in multiple languages (JavaScript/TypeScript, Python, Java) for easy integration.
+4. Infrastructure-as-Code using AWS CDK for deploying and managing cloud resources.
+5. Comprehensive documentation for developers.
+6. Sample applications demonstrating API usage in Python and TypeScript.
+7. Tools for interacting with healthcare networks like CommonWell and Carequality.
+
+## Entry points
+The main entry points for developers are:
+
+1. `/packages/api`: The core API server implementation.
+2. `/packages/api-sdk`: The TypeScript/JavaScript SDK for the Metriport API.
+3. `/docs`: Comprehensive documentation for the Medical API and FHIR Converter.
+4. `/samples`: Example applications in Python and TypeScript.
+5. `/packages/infra`: AWS CDK code for infrastructure deployment.
+
+## Key Files
+1. `README.md`: Project overview, setup instructions, and contribution guidelines.
+2. `package.json`: Root package configuration, including workspace definitions and shared scripts.
+3. `lerna.json`: Lerna configuration for managing the monorepo.
+4. `/packages/api/src/app.ts`: Main application file for the Metriport API.
+5. `/docs/mint.json`: Configuration for the documentation website.
+6. `/fern/definition/api.yml`: API definition using the Fern framework.
+
+## Dependencies
+The project relies on several key dependencies:
+
+1. Node.js and npm for package management and running scripts.
+2. AWS SDK and CDK for cloud infrastructure and services.
+3. Express.js for API development.
+4. TypeScript as the primary development language.
+5. Jest for testing.
+6. ESLint and Prettier for code linting and formatting.
+7. Fern for API definition and SDK generation.
+
+## Configuration
+The project uses various configuration files:
+
+1. `package.json`: Defines scripts, workspaces, and shared dependencies.
+2. `lerna.json`: Configures Lerna for monorepo management.
+3. `tsconfig.json`: Root TypeScript configuration.
+4. `.prettierrc.yaml`: Prettier formatting rules.
+5. `.github/workflows/*.yml`: GitHub Actions for CI/CD.
+6. `/fern/generators.yml`: Configuration for SDK generation.
+7. Environment variables for runtime configuration, typically loaded from `.env` files in each package.
+
+The project is set up to support multiple environments (production, staging, sandbox) and includes configurations for continuous integration, testing, and deployment using GitHub Actions. It also provides comprehensive documentation and sample applications to help developers integrate with the Metriport API effectively.

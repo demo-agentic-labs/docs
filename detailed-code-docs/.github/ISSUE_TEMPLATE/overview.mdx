@@ -1,0 +1,67 @@
+---
+title: "Overview"
+---
+
+## High-level description
+
+This directory contains GitHub Issue Templates for the Metriport project. These templates are designed to standardize and streamline the process of submitting bug reports and feature requests. The templates ensure that users provide comprehensive and consistent information, making it easier for the development team to triage, understand, and address issues efficiently.
+
+## What does it do?
+
+The Issue Templates in this directory serve two main purposes:
+
+1. Bug Report Template: This template guides users through the process of reporting bugs by prompting them to provide specific details about the issue, such as steps to reproduce, expected behavior, and actual behavior. This structured approach helps developers quickly understand and diagnose reported problems.
+
+2. Feature Request Template: This template allows users to suggest new features or improvements to the Metriport project. It prompts users to describe the problem they're facing, propose a solution, consider alternatives, and provide additional context. This format helps the development team evaluate and prioritize feature requests effectively.
+
+Additionally, the configuration file disables blank issues, ensuring that all submissions follow one of the predefined templates. This approach maintains consistency and quality in issue reporting.
+
+## Key Files
+
+1. `bug-report.yml`: This file defines the structure for bug reports. It includes fields for steps to reproduce, expected behavior, actual behavior, environment details, and additional comments. The template uses a combination of markdown instructions and textarea inputs to guide users through the reporting process.
+
+2. `feature-request.yml`: This file outlines the template for feature requests. It includes sections for describing the problem, suggesting a solution, considering alternatives, and providing additional context. Like the bug report template, it uses markdown and textarea inputs to collect information.
+
+3. `config.yml`: This configuration file disables blank issues, ensuring that all new issues must use one of the predefined templates.
+
+## Configuration
+
+The `config.yml` file contains the following configuration:
+
+```yaml
+blank_issues_enabled: false
+```
+
+This setting prevents users from creating issues without using a template, encouraging more structured and informative issue reporting.
+
+Both the bug report and feature request templates use labels to categorize issues automatically:
+
+- Bug Report: `["bug", "triage"]`
+- Feature Request: `["feature", "triage"]`
+
+These labels help in the initial categorization and prioritization of issues.
+
+## API/Interface Reference
+
+While not a traditional API, these templates define the interface for submitting issues to the Metriport project:
+
+### Bug Report Template
+
+| Field | Type | Required | Description |
+|:------|:-----|:---------|:------------|
+| Steps to reproduce | textarea | Yes | Detailed steps to recreate the bug |
+| Expected behavior | textarea | Yes | What the user expected to happen |
+| Actual behavior | textarea | Yes | What actually happened (the bug) |
+| Environment | textarea | No | Optional details about the user's environment |
+| Additional comments | textarea | No | Any other relevant information |
+
+### Feature Request Template
+
+| Field | Type | Required | Description |
+|:------|:-----|:---------|:------------|
+| Problem | textarea | Yes | Description of the problem or need |
+| Suggested solution | textarea | Yes | Proposed solution or feature |
+| Alternatives | textarea | No | Alternative solutions considered |
+| Additional context | textarea | No | Any other relevant information |
+
+These structured formats ensure that all necessary information is collected consistently across all bug reports and feature requests, facilitating efficient issue management and resolution.
